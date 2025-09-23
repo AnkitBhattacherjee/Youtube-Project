@@ -729,6 +729,10 @@ p{
   font-weight: 600;
 }
 
+.CreatorName a:hover{
+  color: #494949;
+}
+
 /* ========== VERIFIED ICON ========== */
 .verified {
   margin-left: 0.25rem;

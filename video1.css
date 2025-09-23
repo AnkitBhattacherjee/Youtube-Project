@@ -565,6 +565,7 @@ p{
   width: fit-content;
 }
 
+
 .Subscribers{
   margin-top: 0.4rem;
   font-size: 0.9rem;
@@ -830,6 +831,11 @@ p{
   margin-top: 0.4rem;
   font-size: 0.9rem;
   font-weight: 400;
+  color: #494949;
+}
+
+.CreatorName a:hover{
+  color: #181818;
 }
 
 
