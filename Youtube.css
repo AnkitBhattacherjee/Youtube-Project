@@ -1,0 +1,899 @@
+/* ========== RESET ========== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+nav{
+  /* height: 80px; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ffffffec;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  position: fixed;
+  top: 0;
+  padding-bottom: 0.6rem;
+  z-index: 999;
+}
+
+#YourProfile img{
+  height: 1.6rem;
+}
+
+#YourProfile p{
+  height: 2rem;
+  padding-left: 1rem;
+}
+
+#menu_icon{
+  height: 1.4rem;
+  width: fit-content;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.15rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#menu_icon svg{
+  height: 1.2rem;
+  width: fit-content;
+  
+}
+
+#menu_icon:hover{
+  background-color: #eeeeee;
+}
+
+#YouTubeicon{
+  position: fixed;
+  top: 0;
+  left: 4rem;
+  margin-right: 18rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#YouTubeicon img{
+  height: fit-content;
+  width: 6rem; 
+}
+/* ========== SEARCH BAR ========== */
+#searchbar{
+  display: flex;
+  margin-top: 0.6rem; 
+  /*margin-left: 17.5rem;  280px */
+  height: fit-content;
+  border: none;
+}
+
+#searchbar textarea{
+  height: 2.5rem; 
+  width: 27.5rem; 
+  padding: 0.5rem 0.75rem 0.5rem 1.25rem; 
+  resize: none;
+  border-radius: 2rem 0 0 2rem; 
+  font: 1em sans-serif;
+  border: 0.0625rem solid #cdcdcd; 
+  white-space: nowrap;     
+  overflow: hidden;        
+  text-overflow: clip;     
+  outline: none;
+}
+
+#searchbar textarea:focus {
+  outline: none;
+  border: 1px solid #1a73e8;
+}
+/* Expanded search state */
+#searchbar.tap {
+  margin-left: 15rem; 
+}
+
+#searchbar textarea.tap {
+  width: 30rem; 
+  padding: 0.5rem 0.75rem 0.5rem 3.25rem; 
+}
+/* Hidden search icon (shows only in expanded mode) */
+#searchbar #searchicon_hidden {
+  height: 2.4rem; 
+  width: 2.9rem; 
+  background-color: #ffffff;
+  border-radius: 2rem 0 0 2rem; 
+  transform: translateX(3rem); 
+  display: none;
+  margin-top: 1px;
+}
+
+#searchbar #searchicon_hidden.tap {
+  display: block;
+}
+
+#searchbar #searchicon_hidden svg {
+  height: 1rem; 
+  width: fit-content;
+  margin-top: 0.7rem; 
+  margin-left: 0.7rem; 
+}
+
+#searchbar #searchicon_hidden svg.tap{
+  display: block;
+}
+/* Search button */
+#searchicon{
+  height: 2.5rem; 
+  width: 4rem; 
+  border-radius: 0 2rem 2rem 0; 
+  background-color: #eeeeee;
+  border: 0.0625rem solid #cdcdcd;
+  cursor: pointer;
+}
+
+#searchicon:hover{
+  background-color: #dbdbdb;
+}
+
+#searchicon svg{
+  height: 1.5rem; 
+  margin-left: 1.5rem; 
+  margin-top: 0.5rem; 
+}
+/* Mic icon */
+#micicon{
+  height: 2.5rem; 
+  width: 2.5rem; 
+  border-radius: 2rem; 
+  background-color: #eeeeee;
+  padding: 0.625rem; 
+  margin-top: 0.6rem; 
+  margin-left: 1rem; 
+  margin-right: 16rem;
+  cursor: pointer;
+}
+
+#micicon:hover{
+  background-color: #dbdbdb;
+}
+
+#micicon img{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  /* filter: invert(100%);  for invert the svg icons*/
+}
+
+/* Close icon for search */
+#searchbar_close_icon{
+  height: 1.3rem; 
+  width: 0;
+  margin-top: 0.5rem;
+  transform: translateX(-2rem);
+}
+
+#searchbar_close_icon svg{
+  height: 1.3rem; 
+  width: fit-content;
+  display: none;
+}
+
+#searchbar_close_icon svg.tap{
+  display: block;
+  cursor: pointer;
+}
+/* ========== NAV RIGHT PART (create button, profile, notifications) ========== */
+#right_part{
+  display: flex;
+  margin-right: 3rem;
+}
+/* Create button */
+#create{
+  display: flex;
+  gap: 1rem;
+  background-color: #eeeeee;
+  height: 2rem;
+  width: fit-content;
+  padding: 1.2rem 1rem;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+#create:hover{
+  background-color: #dbdbdb;
+}
+
+#create svg{
+  height: 1rem;
+}
+
+#create p{
+  font-weight: 500;
+  font-size: 1rem;
+}
+/* Profile circle */
+#profile{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  background-color: #1a73e8;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+/* Notification icon */
+#notification{
+  height: 2.2rem;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+#notification:hover{
+  background-color: #eeeeee;
+}
+
+#notification svg{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  height: 1.5rem;
+  width: fit-content;
+}
+/* Text defaults */
+p{
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* ========== LEFT SIDE BAR ========== */
+#left_side_bar{
+  background-color: #ffffff;
+  width: 16%;
+  height: 98vh;
+  position: fixed;
+  padding-top: 0.8rem;
+  margin-top: 3rem;
+  padding-left: 0.4rem;
+  z-index: 2;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* Sidebar links */
+.left_side_bar_element{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.left_side_bar_element img{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.left_side_bar_element p{
+  padding-left: 1rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.left_side_bar_element .active{
+  background-color: #eeeeee;
+}
+
+.left_side_bar_element:hover{
+  background-color: #eeeeee;
+}
+/* Sidebar section headers */
+.left_side_bar_section_header{
+  margin-left: 1rem;
+  width: 92%;
+  height: 1.8rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.left_side_bar_section_header p{
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.left_side_bar_section_header img{
+  padding-left: 0.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+}
+/* Subscription section in sidebar */
+.left_side_subscription_{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.left_side_subscription_ img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.left_side_subscription_ p{
+  padding-left: 1.2rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.left_side_subscription_:hover,
+.show_more:hover{
+  background-color: #eeeeee;
+}
+/* Divider line in sidebar */
+.divider{
+  background-color: black;
+  width: 95%;
+  height: 0.02rem;
+  margin-top: 0.25rem;
+}
+/* Show more option in sidebar */
+.show_more{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.show_more p{
+  padding-left: 1.2rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.show_more img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  border-radius: 1rem;
+}
+/* Sidebar footer text */
+.left_side_bar_p{
+  margin-top: 0.6rem;
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #494949;
+  cursor: pointer;
+  width: 92%;
+}
+
+.left_side_bar_p:last-child{
+  margin-bottom: 6rem;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;  /* keep thin */
+}
+
+/* Track stays empty */
+::-webkit-scrollbar-track {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+/* Thumb (hidden by default) */
+::-webkit-scrollbar-thumb {
+  background: transparent;   /* invisible initially */
+  border-radius: 1rem;
+  transition: background 0.3s ease;
+}
+
+/* Show thumb only when hovering over the container */
+:hover::-webkit-scrollbar-thumb {
+  background: #c7c7c7;          /* grey when visible */
+}
+
+/* Optional: darker on hover over the thumb itself */
+:hover::-webkit-scrollbar-thumb:hover {
+  background: #b3b2b2;
+}
+
+#YourProfile{
+  display: none;
+}
+
+#left_side_bar #home{
+  background-color: #eeeeee;
+}
+
+
+/* ========== LEFT SIDE BAR MINIMIZED ========== */
+
+#left_side_bar.minimize #history,
+#left_side_bar.minimize #playlists,
+#left_side_bar.minimize #your_videos,
+#left_side_bar.minimize #your_courses,
+#left_side_bar.minimize #watch_later,
+#left_side_bar.minimize #liked_videos,
+#left_side_bar.minimize #settings,
+#left_side_bar.minimize #report_history,
+#left_side_bar.minimize #help,
+#left_side_bar.minimize #send_feedback {
+  display: none;
+}
+
+/* When sidebar is minimized, keep #YourProfile visible */
+#left_side_bar.minimize #YourProfile,
+#left_side_bar.minimize #home,
+#left_side_bar.minimize #shorts,
+#left_side_bar.minimize #subscriptions,
+#left_side_bar.minimize #downloads{
+  display: flex;
+  flex-direction: column;
+  height: 4.5rem;
+  width: 4.8rem;
+  margin-left: 0;
+  padding: 1rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding-left: 0.4rem;
+}
+
+#left_side_bar.minimize #YourProfile p,
+#left_side_bar.minimize #home p,
+#left_side_bar.minimize #shorts p,
+#left_side_bar.minimize #subscriptions p,
+#left_side_bar.minimize #downloads p{
+  padding-top: 0.4rem;
+  padding-left: 0;
+  font-size: 0.65rem;
+  font-weight: 400;
+}
+
+#left_side_bar.minimize #YourProfile img,
+#left_side_bar.minimize #home img,
+#left_side_bar.minimize #shorts img,
+#left_side_bar.minimize #subscriptions img,
+#left_side_bar.minimize #downloads img{
+  width: -webkit-fill-available;
+  height: 1.3rem;
+}
+
+#left_side_bar.minimize #home p,
+#left_side_bar.minimize #shorts p{
+  padding-left: 0.9rem;
+}
+
+#left_side_bar.minimize #YourProfile p{
+  padding-left: 1.1rem;
+}
+
+#left_side_bar.minimize #downloads p{
+  padding-left: 0.4rem;
+}
+
+#left_side_bar.minimize{
+  width: 6%;
+}
+
+#left_side_bar.minimize ~ #video_container{
+  width: 94%;
+  position: relative;
+  left: 6%;
+}
+
+/* When sidebar is minimized, hide subscriptions */
+#left_side_bar.minimize .left_side_subscription_, 
+#left_side_bar.minimize .divider, 
+#left_side_bar.minimize .left_side_bar_section_header, 
+#left_side_bar.minimize .show_more,
+#left_side_bar.minimize .left_side_bar_p,
+#left_side_bar.minimize #history{
+  display: none;
+}
+
+/* Filters for videos */
+#video_category{
+  position: sticky;
+  top: 7%;
+  display: flex;
+  overflow-x: auto;   /* enable horizontal scrolling */
+  overflow-y: hidden; /* prevent vertical scroll */
+  scrollbar-width: none;  
+  background-color: #ffffffec;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 0.6rem 0.8rem;
+  z-index: 2;
+  width: 98.8%;
+}
+
+
+
+.video_category_filter{
+  background-color: #eeeeee;
+  color: #2a2a2a;
+  padding: 0.6rem 1rem;
+  height: 2.4rem;
+  width: fit-content;
+  display: flex;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#video_category #all{
+  background-color: #cdcdcd;
+}
+
+
+/* Video container (right of sidebar) */
+#videos_top{
+  margin-top: 3rem;
+}
+
+#video_container{
+  width: 84%;
+  position: relative;
+  left: 16%;
+}
+
+/* ========== SHORTS HEADER ========== */
+ #ShortsHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 2rem;
+  /* margin-bottom: 0.75rem; */
+  width: 100%;
+}
+
+#ShortsHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+/* ========== THREE DOT ICON ========== */
+.shorts-dot {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 4px;
+}
+
+.threedot{
+  margin: 0;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+  height: rem;
+  width: rem;
+}
+
+.threedot:hover{
+  background-color: #eeeeee;
+}
+
+/* ========== MAIN VIDEO GRID ========== */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.video {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  min-width: 260px;
+  background-color: #fff;
+}
+
+/* ========== THUMBNAIL IMAGE ========== */
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+/* ========== VIDEO DESCRIPTION ========== */
+.description {
+  width: 100%;
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+/* ========== CHANNEL PROFILE IMAGE ========== */
+.ChannelsProfile {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+/* ========== TEXT CONTAINER ========== */
+.TextDescription {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+
+
+.OnlyDescription {
+  width: calc(100% - 2rem);
+  padding-right: 1.5rem;
+}
+
+/* ========== VIDEO TITLE ========== */
+.VideoTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-height: 2.75rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* ========== CREATOR NAME ========== */
+.CreatorName{
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.CreatorName p{
+  font-weight: 600;
+}
+
+.CreatorName a{
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 600;
+}
+
+/* ========== VERIFIED ICON ========== */
+.verified {
+  margin-left: 0.25rem;
+  margin-top: 0.125rem;
+}
+
+/* ========== METADATA (views & time) ========== */
+.metablock {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+/* ========== INLINE THREE DOT ICON ========== */
+.TextDescription > svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ========== SHORTS SECTION ========== */
+
+#allshorts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* exactly 5 columns */
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  overflow: hidden; /* no vertical or horizontal scroll */
+  margin-bottom: 1rem;
+  height: auto; /* or specific height if needed */
+}
+
+#allshorts > :nth-child(n+6) {
+  display: none; /* hide everything after the 5th item */
+}
+/* #allshorts {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-height: 516px;
+} */
+ .short {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+/* .short {
+  flex: 1 1 calc(20% - 1rem); 
+  min-width: 200px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+} */
+
+.ShortsImg {
+  width: 100%;
+  aspect-ratio: 11 / 16;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+/* new wrapper for description + icon */
+.shortsDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 0.25rem;
+}
+
+/* text container */
+.shortsTextDescription {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* title */
+.ShortsVideoTitle {
+  display: inline-block;
+  width: 12.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 2.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-wrap: wrap;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  /* text-overflow: ellipsis; */
+}
+
+/* views */
+.Shortsmetablock {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #aaa;
+  padding-top: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Menu of threedot */
+.threedot_menu{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: #eeeeee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: block;
+}
+
+.threedot_menu a{
+  display: flex;
+  text-decoration: none;
+  /* margin: 0.8rem; */
+  padding: 12px 16px;
+  height: fit-content;
+}
+
+.threedot_menu a:hover{
+  background-color: #dbdbdb;
+}
+
+.threedot_menu a img{
+  height: 18px;
+}
+
+.threedot_menu p{
+  font-size: 1rem;
+  color: #2a2a2a;
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+
+
+@media (max-width: 1024px) {
+  .video {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .video {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+

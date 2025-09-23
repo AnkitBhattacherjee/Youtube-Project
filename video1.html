@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Code with AI - Build the Ecommerce Backend</title>
+    <link rel="icon" type="image/svg+xml" href="Youtube/youtube-logo-2431.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="video1.css">
+</head>
+<body>
+    <nav>
+      <div id="menu_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="1" 
+            stroke-linecap="round">
+          <path d="M3 4H21M3 11H21M3 18H21"></path>
+        </svg>
+      </div>
+
+      <a href="YoutubeFinal.html">
+        <div id="YouTubeicon">
+        <img src="Youtube/Youtube_icon.png" alt="">
+      </div>
+      </a>
+
+      <div id="searchbar">
+
+        <div id="searchicon_hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="bleck"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path></svg>
+        </div>
+        
+        <textarea name="" id="" placeholder="search"></textarea>
+        
+        <div id="searchbar_close_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+        </div>
+
+        <div id="searchicon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path></svg>
+        </div>
+      </div>
+
+      <div id="micicon">
+       <img src="Youtube/mic.svg" alt=""> 
+      </div>
+
+      <div id="right_part">
+        <div id="create">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11.0001L11 2.0005L13 2.00049L13 11.0001L22.0001 10.9999L22.0002 12.9999L13 13.0001L13.0001 22L11.0001 22L11.0001 13.0001L2.00004 13.0003L2 11.0003L11 11.0001Z"></path></svg>
+        <p>Create</p>
+        </div>
+
+        <div id="notification">
+          <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.24 3.304C10.8762 3.304 11.392 2.78823 11.392 2.152C11.392 1.51577 10.8762 1 10.24 1C9.60375 1 9.08798 1.51577 9.08798 2.152C9.08798 2.78823 9.60375 3.304 10.24 3.304Z" stroke="black" stroke-width="1.92"/>
+          <path d="M11.3921 23.0801C11.9221 23.0802 12.3519 23.51 12.3521 24.04C12.3519 24.57 11.9221 24.9999 11.3921 25H9.08839C8.55833 25 8.12763 24.5701 8.12746 24.04C8.12761 23.51 8.55832 23.0801 9.08839 23.0801H11.3921ZM10.2398 2.34375C12.3275 2.34375 14.3299 3.17325 15.8062 4.64941C17.2824 6.12563 18.1118 8.12814 18.1118 10.2158V19.624H19.4556C19.9857 19.624 20.4154 20.0539 20.4155 20.584C20.4154 21.1141 19.9857 21.5439 19.4556 21.5439H1.02394C0.493858 21.5439 0.0641273 21.114 0.0639801 20.584C0.064134 20.0539 0.493863 19.624 1.02394 19.624H2.36769V10.2158C2.36777 8.12821 3.19723 6.12562 4.67336 4.64941C6.14958 3.17326 8.15211 2.34381 10.2398 2.34375ZM10.2398 4.26367C8.66133 4.26373 7.14693 4.89075 6.03078 6.00684C4.91472 7.12297 4.28769 8.63742 4.28761 10.2158V19.624H16.1919V10.2158C16.1918 8.63735 15.5649 7.12299 14.4487 6.00684C13.3325 4.89074 11.8182 4.26367 10.2398 4.26367Z" fill="black"/>
+          </svg>
+
+        </div>
+        <div class="profile">
+        </div>
+      </div>
+    </nav>
+
+    <div id="left_side_bar">
+      <a href="" class="left_side_bar_element" id="home"><img src="Youtube/home.svg" alt=""> <p>Home</p> </a>
+      <a href="" class="left_side_bar_element" id="shorts"> <img src="Youtube/shorts.svg" alt=""> <p>Shorts</p> </a>
+      <a href="" class="left_side_bar_element" id="subscriptions"> <img src="Youtube/Subscription.svg" alt=""> <p>Subscriptions</p> </a>
+      <div class="divider">    </div>
+      <!-- only vissible when left side bar will be minimized -->
+      <a class="left_side_bar_element" id="YourProfile"><img src="Youtube/YourProfile.svg" alt=""><p>You</p></a> 
+      <!--  -->
+      <a class="left_side_bar_section_header"><p>You</p> <img src="Youtube/arrow-right-s-line.svg" alt=""></a>
+      <a href="" class="left_side_bar_element" id="history"><img src="Youtube/history-line.svg" alt=""> <p>History</p> </a>
+      <a href="" class="left_side_bar_element" id="playlists"><img src="Youtube/play-list-2-line.svg" alt=""> <p>Playlists</p> </a>
+      <a href="" class="left_side_bar_element" id="your_videos"><img src="Youtube/video-line.svg" alt=""> <p>Your videos</p> </a>
+      <a href="" class="left_side_bar_element" id="your_courses"><img src="Youtube/graduation-cap-line.svg" alt=""> <p>Your courses</p> </a>
+      <a href="" class="left_side_bar_element" id="watch_later"><img src="Youtube/time-line.svg" alt=""> <p>Watch later</p> </a>
+      <a href="" class="left_side_bar_element" id="liked_videos"> <img src="Youtube/thumb-up-line.svg" alt=""> <p>Liked videos</p> </a>
+      <a href="" class="left_side_bar_element" id="downloads"> <img src="Youtube/downloads.svg" alt=""> <p>Downloads</p> </a>
+      <div class="divider">    </div>
+      <a class="left_side_bar_section_header"><p>Subscriptions</p> <img src="Youtube/arrow-right-s-line.svg" alt=""></a>
+      <a href="" class="left_side_subscription_" id="channel_1"><img src="Youtube/channels1_profile (1).jpg" alt=""> <p>SuperSimpleDev</p> </a>
+      <a href="" class="left_side_subscription_" id="channel_2"><img src="Youtube/channels2_profile (1).jpg" alt=""> <p>Ajay</p> </a>
+      <a href="" class="left_side_subscription_" id="channel_3"><img src="Youtube/channels5_profile.jpg" alt=""> <p>Peter McKinnon</p> </a>
+      <a href="" class="left_side_subscription_" id="channel_4"><img src="Youtube/channels10_profile.jpg" alt=""> <p>AMEG by Bradd</p> </a>
+      <a href="" class="left_side_subscription_" id="channel_5"><img src="Youtube/channels11_profile.jpg" alt=""> <p>William Paterson</p> </a>
+      <div class="show_more"> <img src="Youtube/arrow-down-s-line.svg" alt=""> <p>Show more</p> </div>
+      <div class="divider">    </div>
+      <a href="" class="left_side_bar_element" id="settings"><img src="Youtube/settings-4-line.svg" alt=""> <p>Settings</p> </a>
+      <a href="" class="left_side_bar_element" id="report_history"><img src="Youtube/flag-line.svg" alt=""> <p>Report history</p> </a>
+      <a href="" class="left_side_bar_element" id="help"><img src="Youtube/question-line.svg" alt=""> <p>Help</p> </a>
+      <a href="" class="left_side_bar_element" id="send_feedback"><img src="Youtube/feedback-line.svg" alt=""> <p>Send feedback</p> </a>
+      <div class="divider">    </div>
+      <p class="left_side_bar_p">
+        About Press CopyrightContact us Creators Advertise Developers
+      </p>
+      <p class="left_side_bar_p">
+        Terms Privacy Policy & Safety How YouTube works Test new features
+      </p>
+    </div>
+
+    <div id="right_side_bar">
+        <div id="ongoing_video">
+            <div id="ongoing_video_video_section">
+              <iframe width="968" height="520"
+              src="https://www.youtube.com/embed/_lChLN570VI?si=w8NkKHNey_Imf2s3&autoplay=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+            </div>
+            <p id="ongoing_video_video_section_title">How to Code with AI - Build the Ecommerce Backend</p>
+            <div class="description">
+              <div class="left_options">
+                <a href=""><img src="Youtube/channels1_profile (1).jpg" alt="Unable to load" class="ongoing_video_video_ChannelsProfile"></a>
+                <div class="CreatorNS">
+                  <div class="CreatorName">
+                  <a href="">SuperSimpleDev</a>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                  <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                  </svg>
+                  </div>
+
+                  <p class="Subscribers">1.5lakhs subscribers</p>
+                </div>
+                <div class="Subscribe">
+                  <p>Subscribe</p>
+                </div>
+                
+              </div>
+                  
+                  <div class="right_options">
+                      <div class="Like"> 
+                      <div id="like">
+                      <img src="Youtube/like.svg" alt=""> 
+                      <p>100</p>
+                      </div>
+                      <div class="like_divider"> </div>
+                      <div class="Dislike">
+                        <img src="Youtube/dislike.svg" alt="" id="dislike"> 
+                      </div>
+                      </div>
+                      <div class="Share">
+                        <img src="Youtube/Share_video.svg" alt=""> 
+                        <p>Share</p>
+                      </div>
+                      <div class="Download_video">
+                        <img src="Youtube/download_video.svg" alt=""> 
+                        <p>Download</p>
+                      </div>
+                      <div class="Clip_video">
+                        <img src="Youtube/clip.svg" alt=""> 
+                        <p>Clip</p>
+                      </div>
+                      <div class="more_options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#181818" viewBox="0 0 24 24" id="threedot">
+                        <circle cx="12" cy="5" r="1.5"/>
+                        <circle cx="12" cy="12" r="1.5"/>
+                        <circle cx="12" cy="19" r="1.5"/>
+                        </svg>
+                      </div>
+                  </div>
+              </div>
+              <div class="ongoing_video_video_description">
+                <div>
+
+                </div>
+              </div>
+              <div class="comment_section">
+                <div class="comment_count">
+                  <h2>
+                    2 Comments
+                  </h2>
+                  <div id="comment_filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4V16H23L19 21L15 16H18V4H20ZM12 18V20H3V18H12ZM14 11V13H3V11H14ZM14 4V6H3V4H14Z"></path></svg>
+                    <p>
+                      Sort by
+                    </p>
+                  </div>
+                </div>
+                <div class="comment_input_section">
+                  <div class="profile">
+                  </div>
+                  <textarea id="comments" placeholder="Enter a comment....."></textarea>
+                </div>
+                <div class="comment_list">
+                      
+                </div>
+              </div>
+        </div>
+        <div class="right_side_video_container">
+          <div id="video_category">
+            <p class="video_category_filter" >Songs</p>
+            <p class="video_category_filter" >photography</p>
+            <p class="video_category_filter" >videography</p>
+            <p class="video_category_filter" >Ui Ux designing</p>
+            <p class="video_category_filter" >Live</p>
+            <p class="video_category_filter" >Ghazal</p>
+            <p class="video_category_filter" >apple</p>
+            <p class="video_category_filter" >mobile</p>
+            <p class="video_category_filter" >instrumental</p>
+            <p class="video_category_filter" >website</p>
+            <p class="video_category_filter" >lo-fi</p>
+            <p class="video_category_filter" >podcast</p>
+            <p class="video_category_filter" >recently uploaded</p>
+            <p class="video_category_filter">Travel</p>
+            <p class="video_category_filter">Education</p>
+            <p class="video_category_filter" >website</p>
+            <p class="video_category_filter" >lo-fi</p>
+            <p class="video_category_filter" >podcast</p>
+            <p class="video_category_filter" >recently uploaded</p>
+            <p class="video_category_filter">Travel</p>
+            <p class="video_category_filter">Education</p>
+        </div>
+          <div class="video">  <!-- Start video2 -->
+            <a href="https://youtu.be/bFy6jTEHlzQ?si=jUu9hQ5HU5t44_cv">
+              <img
+                src="Youtube/Y2.avif"
+                alt="This image failed to load"
+                class="thumbnail"
+              />
+            </a> <!-- thumbnail img -->
+
+            <div class="description">
+              <a href="https://www.youtube.com/@ajayraj1" target="_self">
+                <img src="Youtube/channels2_profile (1).jpg" alt="Unable to load" class="ChannelsProfile">
+              </a>
+
+              <div class="TextDescription">
+                <div class="OnlyDescription">
+                  <div class="VideoTitle_name">
+                    <a href="https://youtu.be/bFy6jTEHlzQ?si=jUu9hQ5HU5t44_cv" class="VideoTitle">
+                    The Trek of a Lifetime Through Mountains and Mind | The Everest Base Camp
+                  </a>
+                  </div>
+                  <p class="CreatorName">
+                    <a href="https://www.youtube.com/@ajayraj1">Ajay Raj</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                      <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                    </svg>
+                  </p>
+                  <p class="metablock">
+                    403k views &#183; 4 days ago
+                  </p>
+                </div>  <!-- only text description -->
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                  <circle cx="12" cy="5" r="2"/>
+                  <circle cx="12" cy="12" r="2"/>
+                  <circle cx="12" cy="19" r="2"/>
+                </svg>
+              </div> <!-- description with three dot (more) -->
+            </div> <!-- description & creator dp (ChannelsProfile) -->
+          </div> <!-- video2 -->
+
+
+          <div class="video">  <!-- Start video3 -->
+            <a href="">
+              <img
+                src="Youtube/Y3.avif"
+                alt="This image failed to load"
+                class="thumbnail"
+              />
+            </a> <!-- thumbnail img -->
+
+            <div class="description">
+              <a href="">
+                <img src="Youtube/channels3_profile (1).jpg" alt="Unable to load" class="ChannelsProfile">
+              </a>
+
+              <div class="TextDescription">
+                <div class="OnlyDescription">
+                  <a href="" class="VideoTitle">Can I Make a Movie in One Room?</a>
+                  <p class="CreatorName">
+                    <a href="">William H Baker</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                      <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                    </svg>
+                  </p>
+                  <p class="metablock">
+                    65k views &#183; 13 days ago
+                  </p>
+                </div>  <!-- only text description -->
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                  <circle cx="12" cy="5" r="2"/>
+                  <circle cx="12" cy="12" r="2"/>
+                  <circle cx="12" cy="19" r="2"/>
+                </svg>
+              </div> <!-- description with three dot (more) -->
+            </div> <!-- description & creator dp (ChannelsProfile) -->
+          </div> <!-- video3 -->
+
+
+          <div class="video">  <!-- Start video4 -->
+                  <a href="">
+                    <img
+                      src="Youtube/Y4.avif"
+                      alt="This image failed to load"
+                      class="thumbnail"
+                    />
+                  </a> <!-- thumbnail img -->
+
+                  <div class="description">
+                    <a href="">
+                      <img src="Youtube/channels4_profile.jpg" alt="Unable to load" class="ChannelsProfile">
+                    </a>
+                    
+                    <div class="TextDescription">
+                      <div class="OnlyDescription">
+                        <a href="" class="VideoTitle">How to actually grow as a designer in 2025?</a>
+                        <p class="CreatorName">
+                          <a href="">Designare</a>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                          </svg>
+                        </p>
+                        <p class="metablock">
+                          9.3k views &#183; 3 months ago
+                        </p>
+                      </div> <!-- only text description -->
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                        <circle cx="12" cy="5" r="2"/>
+                        <circle cx="12" cy="12" r="2"/>
+                        <circle cx="12" cy="19" r="2"/>
+                      </svg>
+                    </div> <!-- description with three dot -->
+                  </div> <!-- description & creator dp (ChannelsProfile) -->
+                </div> <!-- video4 -->
+
+
+                <div class="video">  <!-- Start video5 -->
+                <a href="">
+                  <img
+                    src="Youtube/Y5.avif"
+                    alt="This image failed to load"
+                    class="thumbnail"
+                  />
+                </a> <!-- thumbnail img -->
+
+                <div class="description">
+                  <a href="">
+                    <img src="Youtube/channels5_profile.jpg" alt="Unable to load" class="ChannelsProfile">
+                  </a>
+
+                  <div class="TextDescription">
+                    <div class="OnlyDescription">
+                      <a href="" class="VideoTitle">Going viral with a $100 camera</a>
+                      <p class="CreatorName">
+                        <a href="">Peter McKinnon</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                          <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                        </svg>
+                      </p>
+                      <p class="metablock">
+                        1.6 lakhs views &#183; 12 days ago
+                      </p>
+                    </div> <!-- OnlyDescription -->
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                      <circle cx="12" cy="5" r="2"/>
+                      <circle cx="12" cy="12" r="2"/>
+                      <circle cx="12" cy="19" r="2"/>
+                    </svg>
+                  </div> <!-- TextDescription -->
+                </div> <!-- description -->
+              </div> <!-- video5 -->
+
+
+
+                <!-- Video 6 -->
+            <div class="video">  <!-- Start video6 -->
+              <a href="">
+                <img src="Youtube/Y6.avif" alt="This image failed to load" class="thumbnail" />
+              </a> <!-- thumbnail -->
+
+              <div class="description">
+                <a href="">
+                  <img src="Youtube/channels6_profile.jpg" alt="Unable to load" class="ChannelsProfile">
+                </a>
+
+                <div class="TextDescription">
+                  <div class="OnlyDescription">
+                    <a href="" class="VideoTitle">Amazing Shots of Dune: PART TWO</a>
+                    <p class="CreatorName">
+                      <a href="">Amazing Shots</a>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                      </svg>
+                    </p>
+                    <p class="metablock">2.9 lakhs views &#183; 1 yr ago</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                    <circle cx="12" cy="5" r="2"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <circle cx="12" cy="19" r="2"/>
+                  </svg>
+                </div>
+              </div>
+            </div> <!-- video6 -->
+
+
+            <!-- Video 7 -->
+            <div class="video">  <!-- Start video7 -->
+              <a href="">
+                <img src="Youtube/Y7.avif" alt="This image failed to load" class="thumbnail" />
+              </a> <!-- thumbnail -->
+
+              <div class="description">
+                <a href="">
+                  <img src="Youtube/channels7_profile.jpg" alt="Unable to load" class="ChannelsProfile">
+                </a>
+
+                <div class="TextDescription">
+                  <div class="OnlyDescription">
+                    <a href="" class="VideoTitle">
+                      What Graphics Design Will Look Like in 2035 (And How to Prepare)
+                    </a>
+                    <p class="CreatorName">
+                      <a href="">Satori Graphics</a>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                      </svg>
+                    </p>
+                    <p class="metablock">18k views &#183; 4 days ago</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                    <circle cx="12" cy="5" r="2"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <circle cx="12" cy="19" r="2"/>
+                  </svg>
+                </div>
+              </div>
+            </div> <!-- video7 -->
+
+
+            <!-- Video 8 -->
+            <div class="video">  <!-- Start video8 -->
+              <a href="">
+                <img src="Youtube/Y8.avif" alt="This image failed to load" class="thumbnail" />
+              </a> <!-- thumbnail -->
+
+              <div class="description">
+                <a href="">
+                  <img src="Youtube/channels8_profile.jpg" alt="Unable to load" class="ChannelsProfile">
+                </a>
+
+                <div class="TextDescription">
+                  <div class="OnlyDescription">
+                    <a href="" class="VideoTitle">
+                      This is How I Color Grade my Videos
+                    </a>
+                    <p class="CreatorName">
+                      <a href="">Alvin Ojoy</a>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#606060" class="verified">
+                        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1.2 17.3l-5-5 1.4-1.4 3.6 3.6 7.6-7.6 1.4 1.4-9 9z"/>
+                      </svg>
+                    </p>
+                    <p class="metablock">1.1 lakhs views &#183; 10 months ago</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#606060" viewBox="0 0 24 24" id="threedot" class="threedot">
+                    <circle cx="12" cy="5" r="2"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <circle cx="12" cy="19" r="2"/>
+                  </svg>
+                </div>
+              </div>
+            </div> <!-- video8 -->
+
+          </div>  <!-- End of top video section -->
+        
+        <div class="threedot_menu">
+            <a href=""> <img src="Youtube/play-list-2-line.svg" alt=""> <p>Add to queue</p> </a>
+            <a href=""> <img src="Youtube/time-line.svg" alt=""> <p>Save to watch later</p> </a>
+            <a href=""> <img src="Youtube/Save.svg" alt=""> <p>Save to playlist</p> </a>
+            <a href=""> <img src="Youtube/downloads.svg" alt=""> <p>Download</p> </a>
+            <a href=""> <img src="Youtube/share.svg" alt=""> <p>Share</p> </a>
+            <a href=""> <img src="Youtube/Not interested.svg" alt=""> <p>Not interested</p> </a>
+            <a href=""> <img src="Youtube/Don't recommend.svg" alt=""> <p>Don't recommend channel</p> </a>
+            <a href=""> <img src="Youtube/report.svg" alt=""> <p>Report</p> </a>
+          </div>
+        <div class="Subscribe_div">
+                  <div class="all">
+                    <img src="Youtube/All.svg" alt="">
+                    <p>All</p>
+                  </div>
+                  <div class="">
+                    <img src="Youtube/notification.svg" alt="">
+                    <p>Personalized</p>
+                  </div>
+                  <div class="">
+                    <img src="Youtube/none.svg" alt="">
+                    <p>None</p>
+                  </div>
+                  <div class="">
+                    <img src="Youtube/unsubscribe.svg" alt="">
+                    <p>Unsubscribe</p>
+                  </div>
+          </div>
+        </div>
+
+    
+    <script src="video1.js"></script>
+</body>
+</html>

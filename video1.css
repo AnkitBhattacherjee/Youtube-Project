@@ -1,0 +1,1117 @@
+/* ========== RESET ========== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+nav{
+  /* height: 80px; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ffffffec;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  position: fixed;
+  top: 0;
+  padding-bottom: 0.6rem;
+  z-index: 999;
+}
+
+#YourProfile img{
+  height: 1.6rem;
+}
+
+#YourProfile p{
+  height: 2rem;
+  padding-left: 1rem;
+}
+
+#menu_icon{
+  height: 1.4rem;
+  width: fit-content;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.15rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#menu_icon svg{
+  height: 1.2rem;
+  width: fit-content;
+  
+}
+
+#menu_icon:hover{
+  background-color: #eeeeee;
+}
+
+#YouTubeicon{
+  position: fixed;
+  top: 0;
+  left: 4rem;
+  margin-right: 18rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#YouTubeicon img{
+  height: fit-content;
+  width: 6rem; 
+}
+/* ========== SEARCH BAR ========== */
+#searchbar{
+  display: flex;
+  margin-top: 0.6rem; 
+  /*margin-left: 17.5rem;  280px */
+  height: fit-content;
+  border: none;
+}
+
+#searchbar textarea{
+  height: 2.5rem; 
+  width: 27.5rem; 
+  padding: 0.5rem 0.75rem 0.5rem 1.25rem; 
+  resize: none;
+  border-radius: 2rem 0 0 2rem; 
+  font: 1em sans-serif;
+  border: 0.0625rem solid #cdcdcd; 
+  white-space: nowrap;     
+  overflow: hidden;        
+  text-overflow: clip;     
+  outline: none;
+}
+
+#searchbar textarea:focus {
+  outline: none;
+  border: 1px solid #1a73e8;
+}
+/* Expanded search state */
+#searchbar.tap {
+  margin-left: 15rem; 
+}
+
+#searchbar textarea.tap {
+  width: 30rem; 
+  padding: 0.5rem 0.75rem 0.5rem 3.25rem; 
+}
+/* Hidden search icon (shows only in expanded mode) */
+#searchbar #searchicon_hidden {
+  height: 2.4rem; 
+  width: 2.9rem; 
+  background-color: #ffffff;
+  border-radius: 2rem 0 0 2rem; 
+  transform: translateX(3rem); 
+  display: none;
+  margin-top: 1px;
+}
+
+#searchbar #searchicon_hidden.tap {
+  display: block;
+}
+
+#searchbar #searchicon_hidden svg {
+  height: 1rem; 
+  width: fit-content;
+  margin-top: 0.7rem; 
+  margin-left: 0.7rem; 
+}
+
+#searchbar #searchicon_hidden svg.tap{
+  display: block;
+}
+/* Search button */
+#searchicon{
+  height: 2.5rem; 
+  width: 4rem; 
+  border-radius: 0 2rem 2rem 0; 
+  background-color: #eeeeee;
+  border: 0.0625rem solid #cdcdcd;
+  cursor: pointer;
+}
+
+#searchicon:hover{
+  background-color: #dbdbdb;
+}
+
+#searchicon svg{
+  height: 1.5rem; 
+  margin-left: 1.5rem; 
+  margin-top: 0.5rem; 
+}
+/* Mic icon */
+#micicon{
+  height: 2.5rem; 
+  width: 2.5rem; 
+  border-radius: 2rem; 
+  background-color: #eeeeee;
+  padding: 0.625rem; 
+  margin-top: 0.6rem; 
+  margin-left: 1rem; 
+  margin-right: 16rem;
+  cursor: pointer;
+}
+
+#micicon:hover{
+  background-color: #dbdbdb;
+}
+
+#micicon img{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  /* filter: invert(100%);  for invert the svg icons*/
+}
+
+/* Close icon for search */
+#searchbar_close_icon{
+  height: 1.3rem; 
+  width: 0;
+  margin-top: 0.5rem;
+  transform: translateX(-2rem);
+}
+
+#searchbar_close_icon svg{
+  height: 1.3rem; 
+  width: fit-content;
+  display: none;
+}
+
+#searchbar_close_icon svg.tap{
+  display: block;
+  cursor: pointer;
+}
+
+/* ========== NAV RIGHT PART (create button, profile, notifications) ========== */
+#right_part{
+  display: flex;
+  margin-right: 3rem;
+}
+
+#create{
+  display: flex;
+  gap: 1rem;
+  background-color: #eeeeee;
+  height: 2rem;
+  width: fit-content;
+  padding: 1.2rem 1rem;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+#create:hover{
+  background-color: #dbdbdb;
+}
+
+#create svg{
+  height: 1rem;
+}
+
+#create p{
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Profile circle */
+.profile{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  background-color: #1a73e8;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+/* Notification icon */
+#notification{
+  height: 2.2rem;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+#notification:hover{
+  background-color: #eeeeee;
+}
+
+#notification svg{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  height: 1.5rem;
+  width: fit-content;
+}
+
+/* Text defaults */
+p{
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* ========== LEFT SIDE BAR ========== */
+#left_side_bar{
+  background-color: #ffffff;
+  width: 16%;
+  height: 98vh;
+  position: fixed;
+  padding-top: 0.8rem;
+  margin-top: 4.2rem;
+  padding-left: 0.4rem;
+  z-index: 2;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* Sidebar links */
+.left_side_bar_element{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.left_side_bar_element img{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.left_side_bar_element p{
+  padding-left: 1rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.left_side_bar_element .active{
+  background-color: #eeeeee;
+}
+
+.left_side_bar_element:hover{
+  background-color: #eeeeee;
+}
+/* Sidebar section headers */
+.left_side_bar_section_header{
+  margin-left: 1rem;
+  width: 92%;
+  height: 1.8rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.left_side_bar_section_header p{
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.left_side_bar_section_header img{
+  padding-left: 0.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+}
+/* Subscription section in sidebar */
+.left_side_subscription_{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.left_side_subscription_ img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.left_side_subscription_ p{
+  padding-left: 1.2rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.left_side_subscription_:hover,
+.show_more:hover{
+  background-color: #eeeeee;
+}
+/* Divider line in sidebar */
+.divider{
+  background-color: black;
+  width: 95%;
+  height: 0.02rem;
+  margin-top: 0.25rem;
+}
+/* Show more option in sidebar */
+.show_more{
+  width: 92%;
+  height: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.show_more p{
+  padding-left: 1.2rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.show_more img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  border-radius: 1rem;
+}
+/* Sidebar footer text */
+.left_side_bar_p{
+  margin-top: 0.6rem;
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #494949;
+  cursor: pointer;
+  width: 92%;
+}
+
+.left_side_bar_p:last-child{
+  margin-bottom: 6rem;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;  /* keep thin */
+}
+
+/* Track stays empty */
+::-webkit-scrollbar-track {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #f7f7f7;
+}
+
+/* Thumb (hidden by default) */
+::-webkit-scrollbar-thumb {
+  background: transparent;   /* invisible initially */
+  border-radius: 1rem;
+  transition: background 0.3s ease;
+}
+
+/* Show thumb only when hovering over the container */
+:hover::-webkit-scrollbar-thumb {
+  background: #c7c7c7;          /* grey when visible */
+}
+
+/* Optional: darker on hover over the thumb itself */
+:hover::-webkit-scrollbar-thumb:hover {
+  background: #b3b2b2;
+}
+
+#YourProfile{
+  display: none;
+}
+
+#left_side_bar.minimize{
+  display: none;
+}
+
+#right_side_bar{
+    width: 100%;
+    z-index: 0;
+}
+
+#left_side_bar.minimize~#right_side_bar{
+    width: 100%;
+    z-index: 0;
+}
+
+/* complete video container page */
+
+#ongoing_video{
+    position: fixed;
+    top: 10%;
+    left: 4%;
+    width: 96%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+#ongoing_video_video_section{
+    width: 66%;
+    height: 68.75%;
+    /* background-color: #1a73e8; */
+    border: 2px solid #494949;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#ongoing_video_video_section_title{
+    width: 66%;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* ==== Video container or full page ===== */
+
+/* ========== VIDEO DESCRIPTION ========== */
+.description {
+  width: 66%;
+  display: flex;
+  padding-top: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left_options{
+  display: flex;
+  align-items: center;
+}
+
+/* ========== CHANNEL PROFILE IMAGE ========== */
+.ongoing_video_video_ChannelsProfile{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+.CreatorNS{
+  height: 3rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.CreatorNS .CreatorName a{
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* ========== CREATOR NAME ========== */
+.CreatorName{
+  font-size: 0.875rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.CreatorName svg{
+  margin-top: 0.4rem;
+}
+
+.CreatorName a{
+  text-decoration: none;
+  color: #181818;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.Subscribers{
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.right_options{
+  display: flex;
+  /* position: absolute; */
+  align-items: center;
+}
+
+/* Subscribe button */
+.Subscribe{
+  background-color: #181818;
+  color: #eeeeee;
+  /* margin-left: 1rem; */
+  margin-top: 0.3rem;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.Subscribe p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#Subscribe_notification{
+  filter: invert(1); 
+  margin-right: 0.6rem;
+}
+
+#Subscribe_downarrow{
+  filter: invert(1); 
+  margin-left: 0.6rem;
+}
+
+.Subscribe:hover{
+  background-color: #2a2a2a;
+}
+/* Like button */
+.Like{
+  background-color: #eeeeee;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  /* margin-left: 0.4rem; */
+  cursor: pointer;
+}
+
+.Like #like{
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem 0.7rem 0.4rem;
+  border-radius: 5rem 0 0 5rem;
+}
+.Like #like img{
+  margin-left: 0.4rem;
+}
+
+.Like p{
+  margin-left: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* Hover effect on Like*/
+.Like #like:hover{
+  background-color: #c7c7c7;
+}
+/* like divider */
+.like_divider{
+  /* margin-left: 0.4rem; */
+  background-color: #181818;
+  height: 1.6rem;;
+  width: 0.5px;
+}
+/* dislike  */
+.Dislike{
+  display: flex;
+}
+#dislike{
+  background-color: #eeeeee;
+  /* margin-left: 0.4rem; */
+  /* padding: 1rem 1rem  1rem 0; */
+  padding: 0.7rem 1.2rem 0.7rem 1.1rem;
+  border-radius: 0 5rem 5rem 0;
+}
+#dislike img{
+  margin-left: 0.4rem;
+}
+/* Hover effect on Dislike*/
+.Like #dislike:hover{
+  background-color: #c7c7c7;
+}
+/* Share button */
+.Share{
+  background-color: #eeeeee;
+  margin-top: 0.3rem;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.Share p{
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* Hover effect on Share*/
+.Share:hover{
+  background-color: #c7c7c7;
+}
+/* Download button */
+.Download_video{
+  background-color: #eeeeee;
+  margin-top: 0.3rem;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.Download_video p{
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* Hover effect on Download_video*/
+.Download_video:hover{
+  background-color: #c7c7c7;
+}
+/* Clip_video button */
+.Clip_video{
+  background-color: #eeeeee;
+  margin-top: 0.3rem;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.Clip_video p{
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* Hover effect on Clip_video*/
+.Clip_video:hover{
+  background-color: #c7c7c7;
+}
+/* Three_dot button */
+.more_options{
+  background-color: #eeeeee;
+  margin-top: 0.3rem;
+  height: 2.6rem;
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  rotate: 90deg;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.more_options svg{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+/* Hover effect on more_options*/
+.more_options:hover{
+  background-color: #c7c7c7;
+}
+/* ==== right side video container ==== */
+
+.right_side_video_container{
+  width: 30%;
+  height: 94vh;
+  position: fixed;
+  top: 10%;
+  right: 1%;
+  overflow: scroll;
+}
+
+.right_side_video_container #threedot{
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.2rem;
+}
+
+.right_side_video_container #threedot:hover{
+  background-color: #eeeeee;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+  height: 8rem;
+}
+
+.video:last-child{
+  margin-bottom: 2rem;
+}
+
+.ChannelsProfile{
+  display: none;
+}
+
+.TextDescription{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.OnlyDescription{
+  height: 100%;
+  width: 80%;
+  margin-left: 0.4rem;
+}
+
+.VideoTitle{
+  text-decoration: none;
+  color: #181818;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.VideoTitle_name{
+  height: 2.5rem;
+  overflow-y: hidden;
+  width: 12rem;
+}
+
+.CreatorName a{
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+
+.metablock{
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.thumbnail{
+  height: 95%;
+  width: 13rem;
+  border-radius: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.ongoing_video_video_description{
+  height: 10vh;
+  width: 66%;
+  overflow-y: hidden;
+  margin-top: 1.4rem;
+  border-radius: 1rem;
+  background-color: #d1d1d1;
+}
+
+.ongoing_video_video_description div{
+  height: 20vh;
+}
+
+
+/* comment section */
+
+.comment_section{
+  /* height: 50vh; */
+  height: auto;
+  /* background-color: #eaeaea; */
+  width: 66%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  padding-left: 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+.comment_section textarea{
+  /* margin-top: 2rem; */
+  height: fit-content;
+  width: 80%;
+  resize: none;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 1rem;
+  padding-left: 0.4rem;
+  font-size: 0.8rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  margin-left: 1rem;
+  overflow: hidden; /* hide scrollbar */
+}
+
+#threedot{
+  cursor: pointer;
+}
+
+.comment_section #threedot{
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+  height: 2rem;
+  width: 2rem;
+}
+
+.comment_section #threedot:hover{
+  background-color: #eeeeee;
+}
+
+.comment_count{
+  display: flex;
+  
+}
+
+.comment_count h2{
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+#comment_filter{
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.comment_count svg{
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.comment_count p{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 0.4rem;
+}
+
+.comment_input_section{
+  height: fit-content;
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment_input_section .profile {
+  margin-left: 0;
+}
+
+.comment{
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.comm_des{
+  width: 86%;
+  margin-left: 0.55rem;
+}
+
+#profile_name{
+  padding: 0.5rem 2rem;
+}
+
+.comment .profile{
+  padding: 0;
+  margin: 0;
+}
+
+.comm_des .Like{
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  /* margin-left: 0.4rem; */
+  cursor: pointer;
+}
+
+.comm_des .Like #like{
+  display: flex;
+  align-items: center;
+  /* padding: 0.7rem 1.2rem 0.7rem 0.4rem; */
+  /* border-radius: 5rem 0 0 5rem; */
+}
+.comm_des .Like #like img{
+  margin-left: 0.4rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.comm_des .Like p{
+  margin-left: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/* Hover effect on Like*/
+.comm_des .Like #like img:hover{
+  background-color: #c7c7c7;
+}
+/* dislike  */
+.comm_des .Dislike{
+  display: flex;
+}
+.comm_des #dislike{
+  /* margin-left: 0.4rem; */
+  /* padding: 1rem 1rem  1rem 0; */
+  /* padding: 0.7rem 1.2rem 0.7rem 1.1rem; */
+  /* border-radius: 0 5rem 5rem 0; */
+}
+.comm_des #dislike img{
+  margin-left: 0.4rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+/* Hover effect on Dislike*/
+.comm_des .Like #dislike img:hover{
+  background-color: #c7c7c7;
+}
+
+
+/* Filters for videos */
+#video_category{
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow-x: auto;   /* enable horizontal scrolling */
+  overflow-y: hidden; /* prevent vertical scroll */
+  scrollbar-width: none;  
+  background-color: #ffffffec;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  /* padding: 0.6rem 0.8rem; */
+  padding-bottom: 0.4rem;
+  z-index: 2;
+  width: 98.8%;
+}
+
+.video_category_filter{
+  background-color: #eeeeee;
+  color: #2a2a2a;
+  padding: 0.6rem 1rem;
+  height: 2.4rem;
+  width: fit-content;
+  display: flex;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  text-transform: capitalize;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+
+/* Menu of threedot */
+.threedot_menu{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: #eeeeee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: none;
+}
+
+.threedot_menu a{
+  display: flex;
+  text-decoration: none;
+  /* margin: 0.8rem; */
+  padding: 12px 16px;
+  height: fit-content;
+}
+
+.threedot_menu a:hover{
+  background-color: #dbdbdb;
+}
+
+.threedot_menu a img{
+  height: 18px;
+}
+
+.threedot_menu p{
+  font-size: 1rem;
+  color: #2a2a2a;
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+
+
+/* Subscribe and Unsubscribe Button */
+.Subscribe_div{
+  background-color: #eeeeee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: absolute;
+  /* top: 23.5rem; */
+  left: 13.5rem;
+  display: none;
+}
+
+.Subscribe_div div{
+  display: flex;
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  height: -webkit-fill-available;
+}
+
+.Subscribe_div div:hover{
+  background-color: #cdcdcd;
+}
+
+.Subscribe_div div p{
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 1rem;
+}
