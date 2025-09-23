@@ -611,6 +611,8 @@ p{
 .Subscribe:hover{
   background-color: #2a2a2a;
 }
+
+
 /* Like button */
 .Like{
   background-color: #eeeeee;
@@ -845,16 +847,27 @@ p{
 }
 
 .ongoing_video_video_description{
-  height: 10vh;
+  height: 30vh;
   width: 66%;
   overflow-y: hidden;
   margin-top: 1.4rem;
   border-radius: 1rem;
-  background-color: #d1d1d1;
+  background-color: #eeeeee;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.ongoing_video_video_description.tap{
+  height: fit-content;
 }
 
 .ongoing_video_video_description div{
-  height: 20vh;
+  height: 23vh;
+  overflow: hidden;
+}
+
+.ongoing_video_video_description div.tap{
+  height: fit-content;
 }
 
 
@@ -1102,10 +1115,11 @@ p{
   display: flex;
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   height: -webkit-fill-available;
+  cursor: pointer;
 }
 
 .Subscribe_div div:hover{
-  background-color: #cdcdcd;
+  background-color: #dbdbdb;
 }
 
 .Subscribe_div div p{
@@ -1114,4 +1128,8 @@ p{
   font-size: 1rem;
   font-weight: 400;
   padding-left: 1rem;
+}
+
+.Personalized{
+  background-color: #cdcdcd;
 }

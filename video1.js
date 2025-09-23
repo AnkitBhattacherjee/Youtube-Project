@@ -158,20 +158,40 @@ const unsubscribed = `
 
 let isSubscribed = false;
 
+// Subscribe button further animation based on subscribe menu
+let all = document.querySelector(".all");
+let Personalized = document.querySelector(".Personalized");
+let None = document.querySelector(".None");
+let Unsubscribe = document.querySelector(".Unsubscribe");
+
 subscribe.addEventListener("click", (e) => {
     if (!isSubscribed) {
     subscribe.innerHTML = subscribed;
     subscribe.style.backgroundColor = "#ff5df1ff";
     
+    // After 100 miliseconds, it will rotate and move little right
+    setTimeout(() => {
+        Subscribe_notification.style.transform = "rotate(20deg)";
+    }, 100);
+    // After 100 miliseconds, it will rotate and move little right
+    setTimeout(() => {
+        Subscribe_notification.style.transform = "rotate(-20deg)";
+    }, 160); 
     // After 400 miliseconds, remove the text
     setTimeout(() => {
     subscribe.innerHTML = `<img src="Youtube/notification.svg" alt="" id="Subscribe_notification">
                           <img src="Youtube/downarrow.svg" alt="" id="Subscribe_downarrow">
                           `;
+    Subscribe_notification.style.transform = "rotate(0deg)";
     subscribe.style.backgroundColor = "#181818";
     }, 400); 
 
     isSubscribed = true;
+
+    all.style.backgroundColor = "#eeeeee";
+    None.style.backgroundColor = "#eeeeee";
+    Unsubscribe.style.backgroundColor = "#eeeeee";
+    Personalized.style.backgroundColor = "#cdcdcd";
     }
     else{
     // Show the menu relative to button position
@@ -189,6 +209,50 @@ subscribe.addEventListener("click", (e) => {
       subscribemenu.style.top = `${rect.bottom + window.scrollY + 10}px`;
     }
         subscribemenu.style.left = `${rect.left + window.scrollX}px`;
+    
+    // click on all
+    all.onclick = function(){
+        subscribe.innerHTML = `<img src="Youtube/All.svg" alt="" id="Subscribe_notification">
+                            <img src="Youtube/downarrow.svg" alt="" id="Subscribe_downarrow">
+                            `;
+        Personalized.style.backgroundColor = "#eeeeee";
+        None.style.backgroundColor = "#eeeeee";
+        Unsubscribe.style.backgroundColor = "#eeeeee";
+        all.style.backgroundColor = "#cdcdcd";
+        subscribemenu.style.display = "none";
+    }
+    // click on Personalized
+    Personalized.onclick = function(){
+        subscribe.innerHTML = `<img src="Youtube/notification.svg" alt="" id="Subscribe_notification">
+                            <img src="Youtube/downarrow.svg" alt="" id="Subscribe_downarrow">
+                            `;
+        all.style.backgroundColor = "#eeeeee";
+        None.style.backgroundColor = "#eeeeee";
+        Unsubscribe.style.backgroundColor = "#eeeeee";
+        Personalized.style.backgroundColor = "#cdcdcd";
+        subscribemenu.style.display = "none";
+    }
+    // click on None
+    None.onclick = function(){
+        subscribe.innerHTML = `<img src="Youtube/None.svg" alt="" id="Subscribe_notification">
+                            <img src="Youtube/downarrow.svg" alt="" id="Subscribe_downarrow">
+                            `;
+        all.style.backgroundColor = "#eeeeee";
+        Personalized.style.backgroundColor = "#eeeeee";
+        Unsubscribe.style.backgroundColor = "#eeeeee";
+        None.style.backgroundColor = "#cdcdcd";
+        subscribemenu.style.display = "none";
+    }
+    // click on Unsubscribe
+    Unsubscribe.onclick = function(){
+        subscribe.innerHTML = `<p>Subscribe</p>`;
+        all.style.backgroundColor = "#eeeeee";
+        Personalized.style.backgroundColor = "#eeeeee";
+        None.style.backgroundColor = "#eeeeee";
+        Unsubscribe.style.backgroundColor = "#cdcdcd";
+        subscribemenu.style.display = "none";
+        isSubscribed = false;
+    }
     }
 })
 
@@ -197,6 +261,8 @@ document.addEventListener("click", (e) => {
     subscribemenu.style.display = "none";
   }
 });
+
+
 
 // Like and Dislike button
 let like = document.querySelector("#like");
@@ -230,4 +296,11 @@ dislike.onclick = function(){
     }
 }
 
+// video description height expand and compression
+ongoingVideoDescription = document.querySelector(".ongoing_video_video_description");
+ongoingVideoDescriptionTextContainer = document.querySelector(".ongoing_video_video_description div");
+ongoingVideoDescription.onclick = function(){
+    ongoingVideoDescriptionTextContainer.classList.toggle("tap");
+    ongoingVideoDescription.classList.toggle("tap");
+}
 
