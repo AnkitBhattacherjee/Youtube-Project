@@ -988,52 +988,54 @@ p{
 .comm_des .Like{
   height: fit-content;
   width: fit-content;
-  border-radius: 5rem;
-  display: flex;
-  align-items: center;
-  /* margin-left: 0.4rem; */
-  cursor: pointer;
-}
-
-.comm_des .Like #like{
-  display: flex;
-  align-items: center;
-  /* padding: 0.7rem 1.2rem 0.7rem 0.4rem; */
-  /* border-radius: 5rem 0 0 5rem; */
-}
-.comm_des .Like #like img{
-  margin-left: 0.4rem;
-  padding: 0.2rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
 }
 
-.comm_des .Like p{
-  margin-left: 0.4rem;
-  font-size: 1rem;
-  font-weight: 600;
+.comm_des .like{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 5rem;
+  margin: 0;
+  background-color: #ffffff;
 }
+
+.comm_des .like:hover{
+  background-color: #ffffff;
+}
+
+.comm_des .like img{
+  margin-left: 0.4rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
 /* Hover effect on Like*/
-.comm_des .Like #like img:hover{
-  background-color: #c7c7c7;
+.comm_des .like img:hover{
+  padding: 0.8rem;
+  background-color: #eeeeee;
 }
 /* dislike  */
 .comm_des .Dislike{
   display: flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 5rem;
+  margin: 0;
 }
-.comm_des #dislike{
-  /* margin-left: 0.4rem; */
-  /* padding: 1rem 1rem  1rem 0; */
-  /* padding: 0.7rem 1.2rem 0.7rem 1.1rem; */
-  /* border-radius: 0 5rem 5rem 0; */
-}
-.comm_des #dislike img{
-  margin-left: 0.4rem;
-  padding: 0.2rem;
-  border-radius: 0.5rem;
+
+
+.comm_des .Dislike img{
+  padding: 0.8rem;
+  border-radius: 1rem;
 }
 /* Hover effect on Dislike*/
-.comm_des .Like #dislike img:hover{
-  background-color: #c7c7c7;
+.comm_des .Dislike img:hover{
+  padding: 0.8rem;
+  background-color: #eeeeee;
 }
 
 

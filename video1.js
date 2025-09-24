@@ -98,12 +98,11 @@ function updateTaskList(){
                         <div class="profile_name"> @user</div>
                         <div class="comment_description"> ${comment.description} </div>
                         <div class="Like"> 
-                        <div id="like">
-                        <img src="Youtube/like.svg" alt=""> 
-                        <p>100</p>
+                        <div class="like">
+                        <img src="Youtube/like.svg" alt="">
                         </div>
                         <div class="Dislike">
-                            <img src="Youtube/dislike.svg" alt="" id="dislike"> 
+                            <img src="Youtube/dislike.svg" alt=""> 
                         </div>
                         </div>
                         </div>
@@ -234,7 +233,7 @@ subscribe.addEventListener("click", (e) => {
     }
     // click on None
     None.onclick = function(){
-        subscribe.innerHTML = `<img src="Youtube/None.svg" alt="" id="Subscribe_notification">
+        subscribe.innerHTML = `<img src="Youtube/none.svg" alt="" id="Subscribe_notification">
                             <img src="Youtube/downarrow.svg" alt="" id="Subscribe_downarrow">
                             `;
         all.style.backgroundColor = "#eeeeee";
@@ -268,13 +267,15 @@ document.addEventListener("click", (e) => {
 let like = document.querySelector("#like");
 let dislike = document.querySelector(".Dislike");
 
+
 const defaultLike = like.innerHTML;
 const defaultDislike = dislike.innerHTML;
 
 const liked = `<img src="Youtube/likeFilled.svg" alt=""> 
                         <p>101</p>`;
-                    
-const disliked = `<img src="Youtube/dislikeFilled.svg" alt="" id="dislike"> `;                        
+
+const disliked = `<img src="Youtube/dislikeFilled.svg" alt="" id="dislike"> `; 
+
 
 like.onclick = function(){
     dislike.innerHTML = defaultDislike;
@@ -293,6 +294,35 @@ dislike.onclick = function(){
     }
     else{
         dislike.innerHTML = disliked;
+    }
+}
+
+let commentLike = document.querySelector(".comm_des .like img");
+let commentDislike = document.querySelector(".comm_des .Dislike img");                    
+
+const defaultcommentLike = commentLike.innerHTML;
+const defaultcommentDislike = commentDislike.innerHTML;
+
+const commentLiked = `<img src="Youtube/likeFilled.svg" alt="">`;
+const commentDisliked = `<img src="Youtube/dislikeFilled.svg" alt="" id="dislike">`;
+
+commentLike.onclick = function(){
+    commentDislike.innerHTML = defaultcommentDislike;
+    if (commentLike.innerHTML == commentLiked) {
+        commentLike.innerHTML = defaultcommentLike;
+    }
+    else{
+        commentLike.innerHTML = commentLiked;
+    }
+}
+
+commentDislike.onclick = function(){
+    commentLike.innerHTML = defaultcommentLike;
+    if (commentDislike.innerHTML == commentDisliked) {
+        commentDislike.innerHTML = defaultcommentDislike;
+    }
+    else{
+        commentDislike.innerHTML = commentDisliked;
     }
 }
 
