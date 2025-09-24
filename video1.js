@@ -335,25 +335,45 @@ ongoingVideoDescription.onclick = function(){
 }
 
 // Pressing Spacebar will now toggle the autoplay setting.
-const iframe = document.getElementById("myVideo");
-let autoplayOn = true; // starts with autoplay enabled
 
-document.addEventListener("keydown", (e) => {
-  if (e.code === "Space") {
-    e.preventDefault(); // prevent page scrolling when pressing space
+let player;
+// 1️⃣ Load YouTube Iframe API
+if (!window.YT) {
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+}
 
-    let src = iframe.src;
-
-    if (autoplayOn) {
-      // remove autoplay
-      iframe.src = src.replace("&autoplay=1", "").replace("?autoplay=1", "");
-    } else {
-      // add autoplay back
-      iframe.src = src.includes("?")
-        ? src + "&autoplay=1"
-        : src + "?autoplay=1";
+// 2️⃣ Create player after API is ready
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '496',
+    width: '968',
+    videoId: '_lChLN570VI',
+    playerVars: {
+      autoplay: 1,  // autoplay
+      controls: 1,  // show controls
+      mute: 1       // mute to ensure autoplay works
+    },
+    events: {
+      onReady: (event) => {
+        event.target.playVideo(); // start playback
+      }
     }
+  });
+}
 
-    autoplayOn = !autoplayOn;
+// 3️⃣ Spacebar play/pause
+document.addEventListener('keydown', (e) => {
+  if (!player || !player.getPlayerState) return;
+
+  if (e.code === 'Space') {
+    e.preventDefault(); // prevent page scroll
+    const state = player.getPlayerState();
+    if (state === YT.PlayerState.PLAYING) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
   }
 });
