@@ -334,3 +334,26 @@ ongoingVideoDescription.onclick = function(){
     ongoingVideoDescription.classList.toggle("tap");
 }
 
+// Pressing Spacebar will now toggle the autoplay setting.
+const iframe = document.getElementById("myVideo");
+let autoplayOn = true; // starts with autoplay enabled
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    e.preventDefault(); // prevent page scrolling when pressing space
+
+    let src = iframe.src;
+
+    if (autoplayOn) {
+      // remove autoplay
+      iframe.src = src.replace("&autoplay=1", "").replace("?autoplay=1", "");
+    } else {
+      // add autoplay back
+      iframe.src = src.includes("?")
+        ? src + "&autoplay=1"
+        : src + "?autoplay=1";
+    }
+
+    autoplayOn = !autoplayOn;
+  }
+});
