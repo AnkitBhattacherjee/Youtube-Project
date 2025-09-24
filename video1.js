@@ -347,7 +347,7 @@ if (!window.YT) {
 // 2️⃣ Create player after API is ready
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '496',
+    height: '520',
     width: '968',
     videoId: '_lChLN570VI',
     playerVars: {
