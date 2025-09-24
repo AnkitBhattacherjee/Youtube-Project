@@ -218,7 +218,7 @@ subscribe.addEventListener("click", (e) => {
         None.style.backgroundColor = "#eeeeee";
         Unsubscribe.style.backgroundColor = "#eeeeee";
         all.style.backgroundColor = "#cdcdcd";
-        subscribemenu.style.display = "none";
+        subscribemenu.style.display = "none"; 
     }
     // click on Personalized
     Personalized.onclick = function(){
