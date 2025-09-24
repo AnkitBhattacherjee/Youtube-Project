@@ -218,7 +218,7 @@ subscribe.addEventListener("click", (e) => {
         None.style.backgroundColor = "#eeeeee";
         Unsubscribe.style.backgroundColor = "#eeeeee";
         all.style.backgroundColor = "#cdcdcd";
-        subscribemenu.style.display = "none"; 
+        subscribemenu.style.display = "none";
     }
     // click on Personalized
     Personalized.onclick = function(){
@@ -334,46 +334,3 @@ ongoingVideoDescription.onclick = function(){
     ongoingVideoDescription.classList.toggle("tap");
 }
 
-// Pressing Spacebar will now toggle the autoplay setting.
-
-let player;
-// 1️⃣ Load YouTube Iframe API
-if (!window.YT) {
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  document.head.appendChild(tag);
-}
-
-// 2️⃣ Create player after API is ready
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '520',
-    width: '968',
-    videoId: '_lChLN570VI',
-    playerVars: {
-      autoplay: 1,  // autoplay
-      controls: 1,  // show controls
-      mute: 1       // mute to ensure autoplay works
-    },
-    events: {
-      onReady: (event) => {
-        event.target.playVideo(); // start playback
-      }
-    }
-  });
-}
-
-// 3️⃣ Spacebar play/pause
-document.addEventListener('keydown', (e) => {
-  if (!player || !player.getPlayerState) return;
-
-  if (e.code === 'Space') {
-    e.preventDefault(); // prevent page scroll
-    const state = player.getPlayerState();
-    if (state === YT.PlayerState.PLAYING) {
-      player.pauseVideo();
-    } else {
-      player.playVideo();
-    }
-  }
-});
