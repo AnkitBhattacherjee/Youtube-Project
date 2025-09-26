@@ -853,7 +853,7 @@ p{
 }
 
 .ongoing_video_video_description{
-  height: 30vh;
+  height: fit-content;
   width: 66%;
   overflow-y: hidden;
   margin-top: 1.4rem;
@@ -874,6 +874,7 @@ p{
 
 .ongoing_video_video_description div.tap{
   height: fit-content;
+  overflow: visible;
 }
 
 

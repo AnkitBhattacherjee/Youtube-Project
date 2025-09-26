@@ -328,9 +328,18 @@ commentDislike.onclick = function(){
 
 // video description height expand and compression
 ongoingVideoDescription = document.querySelector(".ongoing_video_video_description");
-ongoingVideoDescriptionTextContainer = document.querySelector(".ongoing_video_video_description div");
-ongoingVideoDescription.onclick = function(){
-    ongoingVideoDescriptionTextContainer.classList.toggle("tap");
-    ongoingVideoDescription.classList.toggle("tap");
-}
+ongoingVideoDescriptionTextContainer = document.querySelector(".ongoingVideoDescriptionTextContainer");
+// ongoingVideoDescription.onclick = function(){
+//     ongoingVideoDescriptionTextContainer.classList.toggle("tap");
+//     ongoingVideoDescription.classList.toggle("tap");
+//     console.log("toggeld");
+// }
 
+// ongoingVideoDescriptionTextContainer.onclick = function(){
+//     ongoingVideoDescriptionTextContainer.classList.add("tap");
+//     ongoingVideoDescription.classList.add("tap");
+// }
+
+ongoingVideoDescription.onclick = function(){
+    console.log("toggeld");
+}

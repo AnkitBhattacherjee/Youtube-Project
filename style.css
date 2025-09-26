@@ -858,7 +858,7 @@ p{
   background-color: #eeeeee;
   border-radius: 0.5rem;
   overflow: hidden;
-  display: block;
+  display: none;
 }
 
 .threedot_menu a{
